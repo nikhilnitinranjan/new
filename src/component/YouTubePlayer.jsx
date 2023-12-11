@@ -2,6 +2,7 @@
 import React, { useState, useEffect } from 'react';
 import YouTube from 'react-youtube';
 import axios from 'axios';
+import './YouTubePlayer.css';
 
 const YouTubePlayer = ({ videoId, apiKey }) => {
   const [videoInfo, setVideoInfo] = useState(null);
@@ -35,14 +36,14 @@ const YouTubePlayer = ({ videoId, apiKey }) => {
   };
 
   if (!videoInfo) {
-    return <div>Loading...</div>;
+    return <div className='loading-message'>Loading...</div>;
   }
 
   return (
-    <div>
+    <div className="youtube-player-container">
       <YouTube videoId={videoId} onReady={onReady} />
-      <h2>{videoInfo.title}</h2>
-      <p>{videoInfo.description}</p>
+      <h2 className="youtube-player-title">{videoInfo.title}</h2>
+      <p className="youtube-player-description">{videoInfo.description}</p>
     </div>
   );
 };

@@ -1,0 +1,24 @@
+/* YouTubePlayer.css */
+
+.youtube-player-container {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+.youtube-player-title {
+    font-size: 1.5em;
+    margin-bottom: 10px;
+}
+
+.youtube-player-description {
+    color: #555;
+}
+
+.loading-message {
+    text-align: center;
+    font-size: 1.2em;
+    margin-top: 20px;
+}
+
+/* Add more styles as needed */
